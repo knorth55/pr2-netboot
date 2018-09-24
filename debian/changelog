@@ -1,3 +1,40 @@
+pr2-netboot (0.5.46-preciseubuntu1) UNRELEASED; urgency=medium
+
+  [ TheDash ]
+  * Added precise
+  * Added trusty
+  * Added new netboot files
+  * Added initramfs.c2 tools for new netboot
+  * Updated init.d
+  * Updated dnsmasq
+  * Added the real file not a symlink
+  * Added updated c2init
+  * Added the netboot configuration that provides minimal functionality; a mounted c1 filesystem that is unflavored for legacy c2
+  * updated to most recent working version, boots.. with some read only issues. ssh still not enabled
+
+  [ Tony Baltovski ]
+  * Added wlan0 to dnsmasq.conf.
+
+  [ TheDash ]
+  * added netbootfix to make c2 spawn on startup
+
+  [ Devon Ash ]
+  * Revert "added netbootfix to make c2 spawn on startup"
+
+  [ TheDash ]
+  * Updated to reflcet current netbooting state, works now
+  * Added fix so that proc filesystem is mounted
+  * Updated the kernel links for using the new lowlatency kernel
+
+  [ Tony Baltovski ]
+  * Switched to dhcp to only listen to br0.
+
+  [ TheDash ]
+  * Removed unnecessary mounting of proc and devpts, they are mounted default
+  * Changed krenel version to generic so it doesn't fuck with my main boy c1
+
+ -- TheDash <noobaca2@gmail.com>  Mon, 24 Sep 2018 15:40:29 -0700
+
 pr2-netboot (0.5.46-precise) stable; urgency=low
 
   * Incrementing to SVN: r1239

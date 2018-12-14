@@ -1,1 +1,1 @@
-/boot/vmlinuz-3.18.7-rt1
+/boot/vmlinuz-$(uname -r)

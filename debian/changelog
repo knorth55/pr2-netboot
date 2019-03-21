@@ -1,4 +1,18 @@
-pr2-netboot (0.5.46-xenial) UNRELEASED; urgency=medium
+pr2-netboot (0.5.46-xenial) trusty; urgency=medium
+
+  [ acuellar24 ]
+  * Fixed broken symlink
+  * fixed sysmlink
+  * fixed symlink
+  * fixed broken symlink
+
+  [ David Feil-Seifer ]
+  * changed netboot-kernel-links to default to current kernel version on c1
+  * changed pxeboot network device naming (eth1->lan2) to match kernel naming for 16.04
+
+ -- David Feil-Seifer <dave@cse.unr.edu>  Thu, 21 Mar 2019 01:46:27 -0700
+
+pr2-netboot (0.5.46-xenial) trusty; urgency=medium
 
   [ TheDash ]
   * Added precise
@@ -32,8 +46,6 @@ pr2-netboot (0.5.46-xenial) UNRELEASED; urgency=medium
   [ TheDash ]
   * Removed unnecessary mounting of proc and devpts, they are mounted default
   * Changed krenel version to generic so it doesn't fuck with my main boy c1
-
- -- TheDash <noobaca2@gmail.com>  Mon, 24 Sep 2018 15:40:29 -0700
 
 pr2-netboot (0.5.46-precise) stable; urgency=low
 

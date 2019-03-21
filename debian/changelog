@@ -1,4 +1,4 @@
-pr2-netboot (0.5.46-xenial) trusty; urgency=medium
+pr2-netboot (0.5.47-xenial) trusty; urgency=medium
 
   [ acuellar24 ]
   * Fixed broken symlink

@@ -1,6 +1,7 @@
 pr2-netboot (0.5.49-focal) focal; urgency=medium
 
   * updated python scripts for python3 operation
+  * switched from wg-openvpn to openvpn
 
  -- David Feil-Seifer <dfseifer@dave@cse.unr.edu>  Thu, 11 Jun 2021 09:48:19 -0700
 

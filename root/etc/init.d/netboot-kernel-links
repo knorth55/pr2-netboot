@@ -5,9 +5,9 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 
 # Kernel version to boot on c2
 # defaults to version that booted on c1
-VERSION=`uname -r`
+# VERSION=`uname -r`
 # uncomment to use a specific version
-#VERSION="4.4.0-143-lowlatency"
+VERSION="5.13.0-41-lowlatency"
 
 VMLINUZ_PATH=/boot/vmlinuz-${VERSION}
 INITRD_PATH=/boot/initrd.img-${VERSION}.c2

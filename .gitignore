@@ -1,0 +1,7 @@
+debian/.debhelper/*
+debian/files
+debian/pr2-netboot.debhelper.log
+debian/pr2-netboot.postinst.debhelper
+debian/pr2-netboot.prerm.debhelper
+debian/pr2-netboot.substvars
+debian/pr2-netboot/*

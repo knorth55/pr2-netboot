@@ -223,25 +223,33 @@ def main(argv, stdout, environ):
    if options.netboot:
       ret = subprocess.call(['touch','/netboot'])
 
-   reboot_opt = []
+   poweroff_opt = []
    if options.reboot:
-      reboot_opt = ['-r']
+      poweroff_opt = ['--reboot']
+   else:
+      poweroff_opt = ['--poweroff']
 
    # Invoke ckill:
-   ret = subprocess.call(['ckill','kill','--whitelist=/dev/null', '--sig', 'SIGKILL'])
+   ret = subprocess.call(['ckill','kill', '--sig', 'SIGKILL'])
 
    # Shutdown machine 2:
-   ret = subprocess.call(SSH_CMD + ['c2', 'shutdown', '-P', 'now'] + reboot_opt)
+   print("Shutting down c2...")
+   try:
+      ret = subprocess.call(SSH_CMD + ['c2', 'poweroff', '-f', '--poweroff'], timeout=5)
+   except subprocess.TimeoutExpired as e:
+      print("SSH process to c2 is timeout...")
 
    # Wait for machine 2 to go down:
    while subprocess.call(['ping', 'c2', '-c', '2']) == 0:
+      print("Waiting for c2 shut down...")
       time.sleep(1)
     
    # Wait a little longer for safety
    time.sleep(5)
 
    # Shutdown machine 1
-   subprocess.call(['shutdown','-P','now'] + reboot_opt)
+   print("Shutting down c1...")
+   subprocess.call(['poweroff', '-f'] + poweroff_opt)
 
 
 if __name__ == "__main__":
